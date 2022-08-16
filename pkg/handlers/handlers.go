@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/manik/bookings/pkg/config"
-	"github.com/manik/bookings/pkg/models"
-	"github.com/manik/bookings/pkg/render"
+	"github.com/manikparashar/bookings/pkg/config"
+	"github.com/manikparashar/bookings/pkg/models"
+	"github.com/manikparashar/bookings/pkg/render"
 )
 
 // Repository is the repository type

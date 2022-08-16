@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/manik/bookings/pkg/config"
-	"github.com/manik/bookings/pkg/models"
+	"github.com/manikparashar/bookings/pkg/config"
+	"github.com/manikparashar/bookings/pkg/models"
 )
 
 //var functions = template.FuncMap{}

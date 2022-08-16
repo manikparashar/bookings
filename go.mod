@@ -1,4 +1,4 @@
-module github.com/manik/bookings
+module github.com/manikparashar/bookings
 
 go 1.18
 
