@@ -34,6 +34,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData)
 		// get the template cache from the app config
 		tc = app.TemplateCache
 	} else {
+		fmt.Println("Creating template cache")
 		tc, _ = CreateTemplateCache()
 	}
 
@@ -72,10 +73,10 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData)
 func CreateTemplateCache() (map[string]*template.Template, error) {
 	log.Println("Inside CreateTemplateCache function")
 	myCache := map[string]*template.Template{}
-
 	// get all the files named *.page.tmpl from ./templates directory
 	pages, err := filepath.Glob("./templates/*.page.tmpl")
 	if err != nil {
+		fmt.Println("Error:", err)
 		return myCache, err
 	}
 	// range through all files ending with *.page.tmpl
