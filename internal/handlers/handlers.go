@@ -6,9 +6,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/manikparashar/bookings/pkg/config"
-	"github.com/manikparashar/bookings/pkg/models"
-	"github.com/manikparashar/bookings/pkg/render"
+	"github.com/manikparashar/bookings/internal/config"
+	"github.com/manikparashar/bookings/internal/models"
+	"github.com/manikparashar/bookings/internal/render"
 )
 
 // Repository is the repository type
@@ -109,7 +109,7 @@ func (m *Repository) AvailabilityJSON(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		log.Println(err)
 	}
-	
+
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(out)
 }
